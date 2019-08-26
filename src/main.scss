@@ -1,7 +1,226 @@
 @import 'reset.css';
 
-h1 {
-  color: rebeccapurple;
-  background-image: url(./images/couscous.jpg);
-  background-size: contain;
+@keyframes arrow {
+  0% {
+    transform: translateY(0%) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(60px) rotate(90deg);
+  }
+  75% {
+    transform: translateY(30px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0%) rotate(90deg);
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  position: relative;
+  & img {
+    max-width: 100%;
+    height: auto;
+    align-self: stretch;
+  }
+
+  .arrows {
+    display: flex;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    font-size: 90px;
+    font-weight: 900;
+    top: 600px;
+    left: 90%;
+    cursor: pointer;
+    animation: arrow 2s ease-in-out  infinite;
+  }
+  .welcome {
+    position: absolute;
+    font-size: 90px;
+    color: rgb(35, 233, 101);
+    font-weight: bolder;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(200px);
+  }
+}
+
+#content {
+  height: 660px;
+  border: 1px solid rgba(45, 184, 80, 0.459);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav content";
+  background-color: rgba(45, 184, 80, 0.459);
+  background-image: url('./images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color;
+  
+
+  nav {
+    grid-area: nav;
+    border-right: 4px solid rgb(83, 80, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .information {
+    grid-area: content;
+    border: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18%;
+    overflow-y: hidden;
+    
+    .tabs {
+      width: 50%;
+      transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .tab {
+      background-color: beige;
+      height: 300px;
+      border: 1px solid pink;
+      border-radius: 4px;
+      padding: 1rem;
+      margin-bottom: 100vh;
+      
+      & h2 {
+        font-weight: bold;
+        margin: 2rem;
+      }
+    }
+  }
+}
+
+nav {
+  & a {
+    width: 60px;
+    box-shadow: 0px 0px 1px 2px bisque;
+    border-radius: 8px;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: rgba(226, 157, 39, 0.473);
+    color: rgb(247, 243, 223);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  & a:hover {
+    background-color: black;
+  }
+
+  & a:active {
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+.tab1 {
+  transform: translateY(0%) ;
+}
+
+.tab2 {
+  transform: translateY(-35%);
+}
+
+.tab3 {
+  transform: translateY(-68%);
+}
+
+#home {
+  h2 {
+    text-align: center;
+  }
+  p {
+    float: left;
+  }
+  .thumbnail {
+    width: 30%;
+    display: inline;
+    float: right;
+    border: 2px solid salmon;
+    border-radius: 8px;
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+  }
+}
+
+#food {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  h2{
+    width: 100%;
+    text-align: center;
+  }
+  & .box {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 40%;
+    padding: .5rem;
+    margin: 1rem;
+    p {
+      float: right;
+      text-align: start;
+      text-overflow: clip;
+    }
+    & .thumbnail {
+      border: 2px solid rgba(202, 192, 170, 0.582);
+      border-radius: 6px;
+      float: left;
+      width: 90px;
+      margin: 10px;
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  h2 {
+    align-self: center;
+  }
+
+  .contact-list {
+    height: 100px;
+    border: 1px solid mediumpurple;
+    box-shadow: inset 0px 0px 1px 2px rebeccapurple;
+    border-radius: 10px 0 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    & li {
+      border: 1px solid transparent;
+      padding: .5rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      & strong {
+        font-weight: bolder;
+        margin-right: .5rem;
+      }
+
+      & em {
+        font-style: italic;
+      }
+    }
+  }
 }
