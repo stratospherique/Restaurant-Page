@@ -52,7 +52,7 @@ header {
 
 #content {
   height: 660px;
-  border: 1px solid rgba(45, 184, 80, 0.459);
+  border-top: 6px solid rgba(45, 184, 80, 0.459);
   display: grid;
   grid-template-columns: 150px 1fr;
   grid-template-rows: auto;
