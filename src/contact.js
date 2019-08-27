@@ -19,6 +19,6 @@ const loadContact = () => {
   container.appendChild(h2);
   container.appendChild(ul);
   return container;
-}
+};
 
-export {loadContact as default}
+export { loadContact as default };

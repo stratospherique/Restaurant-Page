@@ -19,20 +19,20 @@ const loadFood = () => {
   box.classList.add('box');
   img1.src = Image1;
   img1.classList.add('thumbnail');
-  p.insertAdjacentElement('beforeEnd',img1);
-  p.insertAdjacentText('beforeend',"Ultricies integer quis auctor elit sed vulputate mi sit amet. At consectetur lorem donec massa. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Sodales ut eu sem integer vitae justo eget.");
+  p.insertAdjacentElement('beforeEnd', img1);
+  p.insertAdjacentText('beforeend', 'Ultricies integer quis auctor elit sed vulputate mi sit amet. At consectetur lorem donec massa. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Sodales ut eu sem integer vitae justo eget.');
   container.appendChild(h2);
-  box.appendChild(p)
+  box.appendChild(p);
   container.appendChild(box);
   // second square
   box2.classList.add('box');
   img2.src = Image2;
   img2.classList.add('thumbnail');
-  p2.insertAdjacentElement('beforeEnd',img2);
-  p2.insertAdjacentText('beforeend',"Wach Tebi Ultricies integer quis auctor elit sed vulputate mi sit amet. At consectetur lorem donec massa. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Sodales ut eu sem integer vitae justo eget.");
+  p2.insertAdjacentElement('beforeEnd', img2);
+  p2.insertAdjacentText('beforeend', 'Wach Tebi Ultricies integer quis auctor elit sed vulputate mi sit amet. At consectetur lorem donec massa. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Sodales ut eu sem integer vitae justo eget.');
   box2.appendChild(p2);
   container.appendChild(box2);
   return container;
-}
+};
 
-export {loadFood as default}
+export { loadFood as default };
