@@ -1,4 +1,5 @@
-import { } from 'lodash';
+// eslint-disable-next-line no-unused-vars
+import _ from 'lodash';
 import './main.scss';
 import UIcontroller from './uinterface';
 import loadHome from './home';

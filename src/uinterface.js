@@ -6,7 +6,9 @@ const UIcontroller = (() => {
   let scroller = document.querySelector('.arrows');
   let content = document.querySelector('#content');
   function handleScrolls(index) {
-    [1, 2, 3].forEach((i) => container.classList.remove(`tab${i}`));
+    [1, 2, 3].forEach((i) => {
+      container.classList.remove(`tab${i}`);
+    });
     container.classList.add(`tab${index + 1}`);
   }
 
