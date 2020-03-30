@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 ### Clone
 
 ```sh
-git@github.com:stratospherique/Restaurant-Page.git
+git clone github.com:stratospherique/Restaurant-Page.git
 cd Restaurant-Page
 ```
 
